@@ -1,0 +1,12 @@
+{
+  "$schema": "https://www.schemastore.org/package.json",
+  "name": "gamedev-project",
+  "version": "1.0.0",
+  "description": "Mario-style web platformer",
+  "license": "MIT",
+  "contributors": [
+    "Mykola Kushnir <mkushnir885@gmail.com>",
+    "Maksym Yatsenko <saddas1rambler@gmail.com>"
+  ],
+  "private": true
+}

@@ -1,0 +1,12 @@
+# Devenv
+.devenv*
+devenv.local.nix
+devenv.local.yaml
+.direnv
+.pre-commit-config.yaml
+
+# Custom Neovim config
+.nvim.lua
+
+# Node.js
+node_modules/
