@@ -8,5 +8,16 @@
     "Mykola Kushnir <mkushnir885@gmail.com>",
     "Maksym Yatsenko <saddas1rambler@gmail.com>"
   ],
+  "type": "module",
+  "devDependencies": {
+    "@eslint/js": "^9.39.1",
+    "eslint": "^8.57.1",
+    "eslint_d": "^14.3.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-import": "^2.32.0",
+    "globals": "^16.5.0",
+    "prettier": "^3.7.4"
+  },
   "private": true
 }
