@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Menu Page</title>
+
+    <link rel="stylesheet" type="text/css" href="styles/menu.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+    />
+  </head>
+
+  <body>
+    <div class="menu-container">
+      <h1 class="menu-title">GAME MENU</h1>
+
+      <button
+        id="play-button"
+        class="pixel-btn pixel-btn--primary"
+        data-href="/level-selector.html"
+      >
+        <i class="fa-solid fa-play" aria-hidden="true"></i>
+        <span>PLAY</span>
+      </button>
+
+      <div class="menu-panel">
+        <div class="menu-row">
+          <div class="row-left">
+            <span class="row-icon" aria-hidden="true"><i class="fa-solid fa-music"></i></span>
+            <label for="toggle-music">MUSIC</label>
+          </div>
+
+          <label class="switch" title="Toggle music">
+            <input type="checkbox" id="toggle-music" checked />
+            <span class="slider"></span>
+          </label>
+        </div>
+
+        <div class="menu-row">
+          <div class="row-left">
+            <span class="row-icon" aria-hidden="true"><i class="fa-solid fa-volume-high"></i></span>
+            <label for="toggle-sounds">SFX</label>
+          </div>
+
+          <label class="switch" title="Toggle sounds">
+            <input type="checkbox" id="toggle-sounds" checked />
+            <span class="slider"></span>
+          </label>
+        </div>
+      </div>
+
+      <p class="menu-hint">PRESS PLAY TO START</p>
+
+      <script type="module">
+        import MenuPage from './scripts/page/menu/menu-page.js';
+        await new MenuPage().init();
+      </script>
+    </div>
+  </body>
+</html>

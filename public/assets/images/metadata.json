@@ -1,0 +1,121 @@
+{
+  "player": {
+    "name": "astronaut",
+    "width": 63,
+    "height": 80,
+    "fps": 12,
+    "states": [
+      { "name": "standing", "frames": [{ "width": 53, "height": 80 }] },
+      {
+        "name": "running",
+        "frames": [
+          { "width": 59, "height": 80 },
+          { "width": 59, "height": 80 }
+        ]
+      },
+      { "name": "jumping", "frames": [{ "width": 63, "height": 80 }] },
+      { "name": "falling", "frames": [{ "width": 63, "height": 80 }] },
+      { "name": "damageGetting", "frames": [{ "width": 54, "height": 80 }] }
+    ]
+  },
+  "enemies": [
+    {
+      "name": "alien",
+      "width": 71,
+      "height": 96,
+      "fps": 10,
+      "states": [
+        {
+          "name": "lives3",
+          "frames": [
+            { "width": 71, "height": 96 },
+            { "width": 71, "height": 96 },
+            { "width": 71, "height": 96 },
+            { "width": 71, "height": 96 },
+            { "width": 71, "height": 96 },
+            { "width": 71, "height": 96 },
+            { "width": 71, "height": 96 }
+          ]
+        },
+        {
+          "name": "lives2",
+          "frames": [
+            { "width": 71, "height": 82 },
+            { "width": 71, "height": 82 },
+            { "width": 71, "height": 82 },
+            { "width": 71, "height": 82 },
+            { "width": 71, "height": 82 },
+            { "width": 71, "height": 82 },
+            { "width": 71, "height": 82 }
+          ]
+        },
+        {
+          "name": "lives1",
+          "frames": [
+            { "width": 71, "height": 68 },
+            { "width": 71, "height": 68 },
+            { "width": 71, "height": 68 },
+            { "width": 71, "height": 68 },
+            { "width": 71, "height": 68 },
+            { "width": 71, "height": 68 },
+            { "width": 71, "height": 68 }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "bug",
+      "width": 65,
+      "height": 65,
+      "fps": 10,
+      "states": [
+        { "name": "standing", "frames": [{ "width": 65, "height": 60 }] },
+        { "name": "jumping", "frames": [{ "width": 65, "height": 60 }] },
+        { "name": "falling", "frames": [{ "width": 65, "height": 60 }] }
+      ]
+    },
+    {
+      "name": "thorns",
+      "width": 64,
+      "height": 64,
+      "fps": 1,
+      "states": [{ "name": "default", "frames": [{ "width": 64, "height": 21 }] }]
+    }
+  ],
+  "enemyVisibleObjs": [],
+  "enemyInvisibleObjs": [
+    {
+      "name": "finish",
+      "width": 64,
+      "height": 128,
+      "fps": 1,
+      "states": [{ "name": "default", "frames": [{ "width": 64, "height": 128 }] }]
+    },
+    {
+      "name": "star",
+      "width": 64,
+      "height": 64,
+      "fps": 10,
+      "states": [
+        {
+          "name": "default",
+          "frames": [
+            { "width": 64, "height": 64 },
+            { "width": 64, "height": 64 }
+          ]
+        }
+      ]
+    }
+  ],
+  "blocks": [
+    { "name": "stones1", "width": 64, "height": 64 },
+    { "name": "stones2", "width": 64, "height": 64 },
+    { "name": "single-stone", "width": 64, "height": 64 }
+  ],
+  "bgLayers": [
+    { "name": "sky", "width": 1280, "height": 640, "speedModifier": 0 },
+    { "name": "mountains", "width": 1280, "height": 640, "speedModifier": 0.1 },
+    { "name": "spaceships-left", "width": 1280, "height": 640, "speed": 2 },
+    { "name": "spaceships-right", "width": 1280, "height": 640, "speed": -2 }
+  ]
+}

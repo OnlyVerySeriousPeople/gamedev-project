@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Game</title>
+
+    <link rel="stylesheet" type="text/css" href="styles/game.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+    />
+  </head>
+
+  <body>
+    <div class="game-container">
+      <div class="game-header">
+        <div class="game-info">
+          <span class="hud-icon" aria-hidden="true"><i class="fa-solid fa-clock"></i></span>
+          <div id="game-time" class="hud-box"></div>
+
+          <span class="hud-icon" aria-hidden="true"><i class="fa-solid fa-heart"></i></span>
+          <div id="player-lives" class="hud-box hp-bar">
+            <span class="hp-segment"></span>
+            <span class="hp-segment"></span>
+            <span class="hp-segment"></span>
+            <span class="hp-segment"></span>
+            <span class="hp-segment"></span>
+          </div>
+        </div>
+
+        <div class="game-controls">
+          <div class="toggle-group">
+            <span class="toggle-label hud-icon" title="Sounds" aria-hidden="true">
+              <i class="fa-solid fa-volume-high"></i>
+            </span>
+            <label class="switch" title="Toggle sounds">
+              <input type="checkbox" id="toggle-sounds" checked />
+              <span class="slider"></span>
+            </label>
+
+            <span class="toggle-label hud-icon" title="Music" aria-hidden="true">
+              <i class="fa-solid fa-music"></i>
+            </span>
+            <label class="switch" title="Toggle music">
+              <input type="checkbox" id="toggle-music" checked />
+              <span class="slider"></span>
+            </label>
+          </div>
+
+          <button id="game-pause-button" class="pause-btn" title="Pause">
+            <i class="fa-solid fa-pause" aria-hidden="true"></i>
+          </button>
+        </div>
+      </div>
+
+      <canvas id="game-canvas"></canvas>
+    </div>
+
+    <div id="game-pause-dialog" class="dialog">
+      <h2>PAUSED</h2>
+      <div class="dialog-buttons">
+        <button id="pause-back-button" class="primary-btn">Resume</button>
+        <button id="pause-retry-button" class="secondary-btn">Retry</button>
+        <button id="pause-exit-button" class="secondary-btn" data-href="/menu.html">
+          Exit to Menu
+        </button>
+      </div>
+    </div>
+
+    <div id="game-win-dialog" class="dialog">
+      <h2>YOU WON!</h2>
+      <div class="dialog-buttons">
+        <button id="game-win-exit-button" class="primary-btn" data-href="/menu.html">
+          Exit to Menu
+        </button>
+      </div>
+    </div>
+
+    <div id="game-over-dialog" class="dialog">
+      <h2>GAME OVER</h2>
+      <div class="dialog-buttons">
+        <button id="game-over-retry-button" class="primary-btn">Retry</button>
+        <button id="game-over-exit-button" class="secondary-btn" data-href="/menu.html">
+          Exit to Menu
+        </button>
+      </div>
+    </div>
+
+    <script type="module">
+      import GamePage from './scripts/page/game/game-page.js';
+      await new GamePage().init();
+    </script>
+  </body>
+</html>

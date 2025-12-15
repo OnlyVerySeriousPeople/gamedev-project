@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Level Selector</title>
+
+    <link rel="stylesheet" type="text/css" href="styles/level-selector.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+    />
+  </head>
+
+  <body>
+    <div class="selector-container">
+      <h1 class="selector-title">SELECT LEVEL</h1>
+
+      <div class="level-grid">
+        <button id="level1-button" class="level-button" data-href="/game.html?level=1">
+          <span class="level-num">1</span>
+          <span class="level-lock" aria-hidden="true">🔒</span>
+        </button>
+
+        <button id="level2-button" class="level-button" data-href="/game.html?level=2">
+          <span class="level-num">2</span>
+          <span class="level-lock" aria-hidden="true">🔒</span>
+        </button>
+      </div>
+
+      <button id="home-button" class="pixel-btn pixel-btn--secondary" data-href="/menu.html">
+        <i class="fa-solid fa-house" aria-hidden="true"></i>
+        <span>HOME</span>
+      </button>
+    </div>
+
+    <script type="module">
+      import LevelSelectorPage from './scripts/page/level-selector/level-selector-page.js';
+      await new LevelSelectorPage().init();
+    </script>
+  </body>
+</html>
